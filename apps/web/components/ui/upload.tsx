@@ -32,7 +32,6 @@ export function UploadModal({onUploadDone}: {
                     const formData = new FormData();
                     formData.append("file", content);
                     const res = await axios.put(url, formData);
-                    console.log(CLOUDFLARE_URL);
                     onUploadDone(`${CLOUDFLARE_URL}/vivekphotogen/${key}`);
                 }
             }

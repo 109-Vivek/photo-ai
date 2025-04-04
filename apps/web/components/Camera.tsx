@@ -3,8 +3,7 @@ import { useAuth } from "@clerk/nextjs"
 import { BACKEND_URL } from "@/app/config"
 import axios from "axios";
 import { useEffect, useState } from "react"
-import { ImageCard, ImageCardSkeletom, ImageCardSkeleton, TImage } from "./ImageCard";
-import { Skeleton } from "./ui/skeleton";
+import { ImageCard, ImageCardSkeleton, TImage } from "./ImageCard";
 
 export function Camera() {
     const [images, setImages] = useState<TImage[]>([]);

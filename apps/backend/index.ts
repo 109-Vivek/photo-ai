@@ -87,7 +87,6 @@ app.post("/ai/generate", authMiddleware, async (req, res) => {
         return;
     }
 
-    console.log("ji there")
     const {request_id, response_url} = await falAiModel.generateImage(parsedBody.data.prompt, model.tensorPath);
 
     const data = await prismaClient.outputImages.create({
